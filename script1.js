@@ -160,8 +160,56 @@ hoverTextElements.forEach(function(element) {
 
 
 
+// slide medicine product 10
 
 
+
+// Auto-slide feature for .scroller
+    const scroller = document.getElementById('scroller');
+    let scrollAmount = 320; // adjust to your card width
+    let autoSlide;
+    function slideNext() {
+      // If at right end, reset to start, else slide right
+      if (scroller.scrollLeft + scroller.offsetWidth >= scroller.scrollWidth - 2) {
+        scroller.scrollTo({left: 0, behavior: 'smooth'});
+      } else {
+        scroller.scrollBy({left: scrollAmount, behavior: 'smooth'});
+      }
+    }
+    function startAutoSlide() {
+      if(autoSlide) clearInterval(autoSlide);
+      autoSlide = setInterval(slideNext, 2800); // every 2.8s
+    }
+    scroller.addEventListener('mouseenter', ()=>clearInterval(autoSlide));
+    scroller.addEventListener('mouseleave', startAutoSlide);
+    startAutoSlide();
+    // Swipe support for phone
+    let startX = null;
+    scroller.addEventListener('touchstart', e=>{startX=e.touches[0].clientX;}, {passive:true});
+    scroller.addEventListener('touchend', e=>{
+      if(startX!==null) {
+        let endX = e.changedTouches[0].clientX;
+        if(endX - startX > 42) scroller.scrollBy({left: -scrollAmount, behavior: 'smooth'});
+        else if(startX - endX > 42) scroller.scrollBy({left: scrollAmount, behavior: 'smooth'});
+        startX=null;
+        startAutoSlide();
+      }
+    }, {passive:true});
+    // Update scroll amount on resize for best effect
+    window.addEventListener('resize', function(){
+      let card = document.querySelector('.scroller a');
+      if(card) scrollAmount = card.offsetWidth + 48;
+    });
+
+
+
+
+
+
+
+
+
+// slide product end here
 
 
 
