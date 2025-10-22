@@ -750,7 +750,7 @@ body {
 .footer-column1 a {
   display: block;
   text-decoration: none;
-  color: #0c3c76;
+  color: hsl(258, 87%, 57%);
   margin-bottom: 6px;
   font-size: 14px;
   transition: all 0.3s ease;
@@ -840,7 +840,7 @@ body {
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: rgb(118, 17, 251);
+            background: rgb(189, 160, 226);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -856,7 +856,172 @@ body {
 
 
 
+/* you sumit button */
+#input1 {
+      padding: 16px 48px;
+      font-size: 1.22em;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(90deg,#388fc8 0%, #9745ec 80%);
+      border: none;
+      border-radius: 30px;
+      box-shadow: 0 7px 26px #a4b6e673;
+      cursor: pointer;
+      letter-spacing: 1.2px;
+      transition:
+        background 0.22s,
+        transform 0.16s,
+        box-shadow 0.19s;
+      outline: none;
+      position: relative;
+      overflow: hidden;
+    }
+    #input1:hover, .pretty-btn:focus {
+      background: linear-gradient(90deg,#9745ec 0%, #388fc8 100%);
+      transform: translateY(-3px) scale(1.05) rotate(-2deg);
+      box-shadow: 0 12px 40px #388fc899;
+    }
+    #input1:active {
+      transform: scale(0.97);
+      box-shadow: 0 3px 12px #8889eb49;
+    }
+    /* Optional ripple effect */
+    #input1::after {
+      content: "";
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%,-50%);
+      width: 0; height: 0;
+      background: rgba(255,255,255,0.5);
+      border-radius: 100%;
+      transition: width .3s, height .3s;
+      z-index: 0;
+    }
+    #input1:active::after {
+      width: 220%;
+      height: 220%;
+      transition: 0s;
+    }
 
+    /* end here */
+
+
+
+
+/* medicine details 10  */
+
+h2.text-3xl {
+      justify-self: center;
+      padding: 50px;
+      text-align: center;
+      color: #2560cf;
+    }
+    .scroller-wrapper {
+      width: 100vw;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto 40px auto;
+      background: #f8fbfd;
+    }
+    .fade {
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 66px;
+      z-index: 2;
+      pointer-events: none;
+      background: linear-gradient(to right, #f8fbfd, rgba(248,251,253,0));
+      display: block;
+    }
+    .fade-right {
+      right: 0; left: auto;
+      background: linear-gradient(to left, #f8fbfd, rgba(248,251,253,0));
+    }
+    .fade-left {
+      left: 0; right: auto;
+    }
+    .scroller {
+      display: flex;
+      gap: 45px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 27px 16vw 37px 16vw;
+      position: relative;
+      z-index: 1;
+      scrollbar-width: thin;
+      scrollbar-color: #c5e6fd #f7fbff;
+    }
+    .scroller a {
+      text-decoration: none;
+      color: #121b2a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #fefdff;
+      border-radius: 27px;
+      min-width: 280px;
+      min-height: 295px;
+      box-shadow: 0 3px 30px #b6d4ef14;
+      font-weight: 700;
+      font-size: 1.18em;
+      transition: transform .23s, box-shadow .18s;
+      will-change: transform;
+      position: relative;
+    }
+    .scroller a:hover {
+      background: #e6f1fa;
+      transform: scale(1.05) rotateY(-7deg);
+      box-shadow: 0 12px 38px #2d6df033;
+      z-index: 10;
+    }
+    .scroller a img {
+      margin-bottom: 18px;
+      border-radius: 50%;
+      width: 130px;
+      height: 130px;
+      box-shadow: 0 6px 22px #2560cf15;
+      background: #fff;
+      object-fit: cover;
+      border: 5px solid #f7fafd;
+    }
+    .scroller a b {
+      font-size: 1.1em;
+      color: #151a4d;
+      font-weight: bold;
+      margin-top: 8px;
+      margin-bottom: 7px;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    .scroller a .pill-emoji {
+      font-size: 1.43em;
+      margin-right: 8px;
+    }
+
+    @media (max-width: 1100px){
+      .scroller { gap: 15vw; padding: 22px 1vw 37px 2vw;}
+      .scroller a { min-width: 190px;min-height:159px;}
+      .scroller a img { width: 77px; height:77px; }
+      .fade, .fade-right, .fade-left { width: 23vw; }
+    }
+    @media (max-width: 640px){
+      h2.text-3xl { padding: 17px 1vw 17px 1vw; font-size: 1.14em;}
+      .scroller { gap: 18vw; padding: 17px 0vw 19px 3vw;}
+      .scroller a { min-width: 136px; min-height: 106px; border-radius:36px;}
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+/* medicine detail end here  */
 
 
 
