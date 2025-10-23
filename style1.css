@@ -975,12 +975,12 @@ h2.text-3xl {
       z-index: 10;
     }
     .scroller a img {
-      margin-bottom: 18px;
+       margin-bottom: 18px;
       border-radius: 50%;
-      width: 130px;
-      height: 130px;
+      width: 400px;
+      height: 300px;
       box-shadow: 0 6px 22px #2560cf15;
-      background: #fff;
+      background: #fff; 
       object-fit: cover;
       border: 5px solid #f7fafd;
     }
@@ -1001,13 +1001,13 @@ h2.text-3xl {
     @media (max-width: 1100px){
       .scroller { gap: 15vw; padding: 22px 1vw 37px 2vw;}
       .scroller a { min-width: 190px;min-height:159px;}
-      .scroller a img { width: 77px; height:77px; }
+      /* .scroller a img { width: 77px; height:77px; } */
       .fade, .fade-right, .fade-left { width: 23vw; }
     }
-    @media (max-width: 640px){
+    @media (max-width: 1100px){
       h2.text-3xl { padding: 17px 1vw 17px 1vw; font-size: 1.14em;}
       .scroller { gap: 18vw; padding: 17px 0vw 19px 3vw;}
-      .scroller a { min-width: 136px; min-height: 106px; border-radius:36px;}
+      .scroller a { min-width: 400px; min-height: 300px; border-radius:36px;}
     }
 
 
